@@ -3,3 +3,16 @@
 body {
   background-color: darkseagreen;
 }
+
+.app {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.quad {
+  width: 45%;
+  height: 50%;
+  border: 2px solid black;
+  text-align: center;
+}
