@@ -1,9 +1,4 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
-@import "_eat.scss";
-@import "_fight.scss";
-@import "_play.scss";
-@import "_sleep.scss";
-@import "_progress.scss";
 
 body {
   background-color: thistle;
@@ -15,8 +10,14 @@ body {
 }
 
 .quad {
-  // width: 50vw;
-  // height: 50vh;
   border: 2px solid black;
   text-align: center;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
 }

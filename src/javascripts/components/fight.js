@@ -1,6 +1,7 @@
 import utils from '../helpers/utils';
+import './fight.scss';
 
-const strength = 100;
+let strength = 100;
 
 const fightCard = () => {
   let domString = '';
@@ -11,5 +12,28 @@ const fightCard = () => {
   `;
   utils.printToDom('#fight', domString);
 };
+
+const retreatEvent = () => {
+  if (strength < 100) {
+    strength += 1;
+  }
+  if (strength > 100) {
+    strength = 100;
+  }
+  fightCard();
+};
+
+const fightEvent = () => {
+  strength -= 10;
+  if (strength < 0) {
+    strength = 0;
+  }
+  fightCard();
+};
+
+
+$('body').on('click', '#runAway', retreatEvent);
+$('body').on('click', '#combat', fightEvent);
+
 
 export default { fightCard };
